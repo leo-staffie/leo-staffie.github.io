@@ -4,164 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Uelzecht Magasinn</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --accent: #ffca28;
-      --accent-dark: #f9a825;
-      --bg: #ffffff;
-      --bg-alt: #fff8e1;
-      --text: #333333;
-      --text-light: #666666;
-      --border: #eeeeee;
-      --font: 'Arial', sans-serif;
+    :root{
+      --accent:#ffc107;          /* main yellow  */
+      --accent-dark:#ffa000;     /* hover yellow */
+      --bg:#ffffff;
+      --bg-alt:#fffbe6;
+      --text:#333;
+      --text-light:#666;
+      --border:#e0e0e0;
+      --radius:8px;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: var(--font); color: var(--text); background: var(--bg-alt); line-height:1.6; }
-
-    header {
-      text-align:center;
-      padding:2rem 1rem;
-      background: var(--bg);
-    }
-    header img {
-      max-width:200px;
-      width:50%;
-      height:auto;
-      border-radius:8px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    }
-    header h1 {
-      margin-top:1rem;
-      font-size:2.5rem;
-      letter-spacing:2px;
-      color: var(--accent-dark);
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--bg-alt);
+      color:var(--text);
+      line-height:1.7;
     }
 
-    /* Tabs */
-    .tabs {
+    /* ---------- HERO ---------- */
+    .hero{
       display:flex;
+      flex-wrap:wrap;
+      align-items:center;
       justify-content:center;
-      border-bottom:2px solid var(--border);
-      background: var(--bg-alt);
+      padding:3rem 1rem;
+      background:var(--bg);
+      gap:3rem;
     }
-    .tab {
-      flex:1;
-      padding:0.75rem 1rem;
-      text-align:center;
-      cursor:pointer;
-      background: var(--bg-alt);
-      border:none;
-      font-weight:bold;
-      color: var(--text-light);
-      position:relative;
-      transition: color 0.3s;
+    .hero-text{
+      max-width:420px;
     }
-    .tab.active {
-      color: var(--accent-dark);
-    }
-    .tab.active::after {
-      content:'';
-      position:absolute;
-      bottom:0;
-      left:10%;
-      width:80%;
-      height:3px;
-      background: var(--accent);
-      border-radius:2px;
-    }
-
-    /* Content panes */
-    .lang-content {
-      max-width:600px;
-      margin:2rem auto;
-      background: var(--bg);
-      border:1px solid var(--border);
-      border-radius:6px;
-      box-shadow:0 4px 8px rgba(0,0,0,0.05);
-    }
-    .lang-pane {
-      display:none;
-      padding:1.5rem;
-    }
-    .lang-pane.active {
-      display:block;
-    }
-    .lang-pane h2 {
+    .hero-text h1{
+      font-size:3rem;
+      color:var(--accent-dark);
       margin-bottom:1rem;
-      font-size:1.5rem;
-      color: var(--accent-dark);
+      letter-spacing:1px;
     }
-    .lang-pane p {
-      margin-bottom:1.5rem;
-    }
-    .lang-pane a {
-      display:inline-block;
-      text-decoration:none;
-      padding:0.5rem 1rem;
-      border-radius:4px;
-      background: var(--accent);
-      color: #fff;
-      font-weight:bold;
-      transition: background 0.3s;
-    }
-    .lang-pane a:hover {
-      background: var(--accent-dark);
+    #langText{
+      margin:1rem 0 2rem;
     }
 
-    footer {
-      text-align:center;
-      font-size:0.9rem;
-      color: var(--text-light);
-      padding:2rem 1rem;
+    /* language chips */
+    .lang-chips{
+      display:flex;
+      gap:.6rem;
+      margin-bottom:2rem;
+      flex-wrap:wrap;
     }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="uelzecht-magasinn-cover.png" alt="Uelzecht Magasinn Cover">
-    <h1>Uelzecht Magasinn</h1>
-  </header>
-
-  <div class="tabs">
-    <button class="tab active" data-lang="lb">Lëtzebuergesch</button>
-    <button class="tab"      data-lang="de">Deutsch</button>
-    <button class="tab"      data-lang="en">English</button>
-    <button class="tab"      data-lang="fr">Français</button>
-  </div>
-
-  <section class="lang-content">
-    <div class="lang-pane active" data-lang="lb">
-      <p>Entdeckt d’Lokal Gemeinschaft mat <strong>Uelzecht Magasinn</strong>. Artikelen iwwer Kultur, Natur, Kanneraktivitéiten am Uelzechtdall.</p>
-    </div>
-    <div class="lang-pane" data-lang="de">
-      <p>Entdecken Sie die lokale Gemeinschaft mit <strong>Uelzecht Magasinn</strong>. Beiträge zu Kultur, Natur, Kinderaktivitäten und Neuigkeiten aus dem Alzettetal.</p>
-    </div>
-    <div class="lang-pane" data-lang="en">
-      <p>Discover the local community with <strong>Uelzecht Magasinn</strong>. Articles on culture, nature, kids’ activities and news from the Alzette valley.</p>
-    </div>
-    <div class="lang-pane" data-lang="fr">
-      <p>Découvrez la communauté locale avec <strong>Uelzecht Magasinn</strong>. Articles sur la culture, la nature, les activités pour enfants et les actualités de la Vallée Alzette.</p>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Uelzecht Magasinn. All rights reserved.
-  </footer>
-
-  <script>
-    const tabs = document.querySelectorAll('.tab');
-    const panes = document.querySelectorAll('.lang-pane');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        panes.forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        document.querySelector(`.lang-pane[data-lang="${tab.dataset.lang}"]`)
-                .classList.add('active');
-      });
-    });
-  </script>
-
-</body>
-</html>
+    .chip{
+      border:none;
+      background:var(--bg-alt);
+      padding:.45rem 1rem;
+      border-radius:50px;
+      font-weight:600;
+      cursor:pointer;
+      transition:.25s;
+      font-size:.9rem;
+      box-shadow:0 0 0 1px var(--border) inset;
+    }
+    .chip.
