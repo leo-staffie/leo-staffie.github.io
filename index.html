@@ -1,7 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uelzecht Magasinn</title>
+  <style>
+    /* Global reset & font */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: sans-serif; color: #333; line-height: 1.5; }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header img {
+      max-width: 200px;
+      width: 50%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    .lang-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .lang {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem;
+      background: #fafafa;
+    }
+    .lang h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      color: #005b96;
+    }
+    .lang p {
+      margin-bottom: 1rem;
+    }
+    .lang a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      background: #005b96;
+      color: #fff;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 2rem 1rem;
+    }
+  </style>
+</head>
 <body>
-<h1>Moien!</h1>
-<p>Welkomm beim Uelzecht Magasinn</p>
+
+  <header>
+    <img src="uelzecht-magasinn-cover.png" alt="Cover of Uelzecht Magasinn">
+    <h1>Uelzecht Magasinn</h1>
+  </header>
+
+  <section class="lang-container">
+
+    <!-- Lëtzebuergesch -->
+    <div class="lang" lang="lb">
+      <h2>Lëtzebuergesch</h2>
+      <p>
+        Entdeckt d’Lokal Gemeinschaft mat <strong>Uelzecht Magasinn</strong>. Artikelen iwwer Kultur, Natur, Kanneraktivitéiten am Uelzechtdall.
+      </p>
+      <a href="#">Abonnéiert elo</a>
+    </div>
+
+    <!-- Deutsch -->
+    <div class="lang" lang="de">
+      <h2>Deutsch</h2>
+      <p>
+        Entdecken Sie die lokale Gemeinschaft mit <strong>Uelzecht Magasinn</strong>. Beiträge zu Kultur, Natur, Kinderaktivitäten und Neuigkeiten aus dem Alzettetal.
+      </p>
+      <a href="#">Jetzt abonnieren</a>
+    </div>
+
+    <!-- English -->
+    <div class="lang" lang="en">
+      <h2>English</h2>
+      <p>
+        Discover the local community with <strong>Uelzecht Magasinn</strong>. Articles on culture, nature, kids’ activities and news from the Alzette valley.
+      </p>
+      <a href="#">Subscribe now</a>
+    </div>
+
+    <!-- Français -->
+    <div class="lang" lang="fr">
+      <h2>Français</h2>
+      <p>
+        Découvrez la communauté locale avec <strong>Uelzecht Magasinn</strong>. Articles sur la culture, la nature, les activités pour enfants et les actualités de la Vallée Alzette.
+      </p>
+      <a href="#">Abonnez-vous maintenant</a>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2025 Uelzecht Magasinn. All rights reserved.
+  </footer>
+
 </body>
 </html>
